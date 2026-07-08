@@ -33,7 +33,4 @@ for i in range (n):
 #     print("No such employee is found")
 
 #Increase the salary of all employees by 10%.
-dict_3={}
-for i in dict_1:
-    for i in dict_1(i):
-        dict_3[i]=
+
