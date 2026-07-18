@@ -1,19 +1,25 @@
 #Problem 1: Student Management System 
 class Student:
-    student_id=0
-    student_name=''
-    course=''
-    marks=0
-    def initialize(self,id,name,c,m):
-        self.student_id=id
-        self.student_name=name
-        self.course=c
-        self.marks=m
+    def __init__(self):
+        student_id=0
+        student_name=''
+        course=''
+        marks=0
+
+    #Accept detail by user
+    def accept_data(self):
+        self.student_id=int(input("Enter Student ID :"))
+        self.student_name=input("Enter Student name :")
+        self.course=input("Enter course :")
+        self.marks=int(input("Enter marks :"))
+        print("-----------------------------------")
+    #Check if the student pass or fail
     def check_result(self,marks):
         if (self.marks>35):
             return "Pass"
         else:
             return "Fail"
+    #To display the data of student
     def display_data(self):
         print("--------Student Details---------")
         print("Student ID :",self.student_id)
@@ -21,13 +27,15 @@ class Student:
         print("Course :",self.course)
         print("Marks :",self.marks)
         print("Result :",self.check_result(self.marks))
+
+#Object Creation
 stu=Student()
-i=int(input("Enter Student ID :"))
-n=input("Enter Student name :")
-co=input("Enter course :")
-ma=int(input("Enter marks :"))
-print("-----------------------------------")
-stu.initialize(i,n,co,ma)
+
+
+#Accept detail
+stu.accept_data()
+
+#Display the data 
 stu.display_data()
 
 
